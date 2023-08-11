@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="font-sans h-screen bg-gray-100">
+        <div class="w-full mx-auto max-w-xl lg:w-1/2 lg:max-w-5xl">
+            <header
+                class="flex justify-between items-center w-full fixed top-0 left-0 bg-black text-gray-500 px-6 py-2 gap-2 flex-wrap">
+                <img class="bg-black w-1/3 lg:w-1/4" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="">
+                <h1 class="flex text-yellow-500 lg:text-2xl text-sm px-4 font-bold text-base">HTML/CSS Quiz tail</h1>
+                <nav class="w-1/3">
+                    <ul class="flex pl-0 justify-start flex-warp lg:justify-end gap-4 text-xs w-full lg:text-lg text-gray-200">
+                        <li><a href="#student-info" accesskey="i">INFO</a></li>
+                        <li><a href="#html-questions" accesskey="h">HTML</a></li>
+                        <li><a href="#css-questions" accesskey="c">CSS</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main class="max-w-2xl">
+            <h1 class="mt-16 text-center text-xl text-orange-400">Switch to: <a class=" underline  text-purple-900 font-bold" href="index.html">Old CSS version</a></h1>
+                <form method="post" class="flex flex-col justify-center h-full px-8 lg:pl-16"
+                    action="https://freecodecamp.org/practice-project/accessibility-quiz">
+                    <section role="region" aria-labelledby="student-info">
+                        <h2 class="text-2xl tracking-wide font-black mt-10 border-b-4 border-gray-200 border-solid">Student Info</h2>
+                        <div class="mt-8 pb-4 flex gap-2 items-center">
+                            <label for="student-name">Name:</label>
+                            <input class="border-2 border-gray-600 border-solid w-1/2" type="text" name="student-name" id="student-name" />
+                        </div>
+                        <div class="flex gap-3 items-center">
+                            <label for="student-email">Email:</label>
+                            <input class="border-2 border-gray-600 border-solid w-1/2" type="email" name="student-email" id="student-email" />
+                        </div>
+                        <div class="flex gap-2 mt-4 items-center">
+                            <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
+                            <input class="border-2 border-gray-600 border-solid px-1 w-1/2" type="date" name="birth-date" id="birth-date" />
+                        </div>
+                    </section>
+                    <section role="region" aria-labelledby="html-questions">
+                        <h2 class="text-2xl tracking-wide font-black mt-10 border-b-4 border-gray-200 border-solid " id="html-questions">HTML
+                        </h2>
+                        <div class="mt-8">
+                            <fieldset class="" name="html-question-one">
+                                    <span class="mb-4 text-lg inline-block">Question #1</span>
+                                <div class="">
+                                    <legend>
+                                        The legend element represents a caption for the content of its
+                                        parent fieldset element
+                                    </legend>
+                                </div>
+                                <ul class="pl-6">
+                                    <li>
+                                        <label for="q1-a1">
+                                            <input type="radio" id="q1-a1" name="q1" value="true" />
+                                            True
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="q1-a2">
+                                            <input type="radio" id="q1-a2" name="q1" value="false" />
+                                            False
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                        <div class="mt-8">
+                            <fieldset class="" name="html-question-two">
+                                    <span class="mb-4 text-lg inline-block">Question #2</span>
+                                <div class="flex gap-2">
+                                    <legend>
+                                        A label element nesting an input element is required to have a
+                                        for attribute with the same value as the input's id
+                                    </legend>
+                                </div>
+                                <ul class="pl-6">
+                                    <li>
+                                        <label for="q2-a1">
+                                            <input type="radio" id="q2-a1" name="q2" value="true" />
+                                            True
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="q2-a2">
+                                            <input type="radio" id="q2-a2" name="q2" value="false" />
+                                            False
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                    </section>
+                    <section role="region" aria-labelledby="css-questions">
+                        <h2 class="text-2xl tracking-wide font-black mt-10 border-b-4 border-gray-200 border-solid" id="css-questions">CSS</h2>
+                        <div class="mt-8">
+                            <div class="">
+                                <label for="customer">Are you a frontend developer?</label>
+                            </div>
+                            <div class="">
+                                <select class="border-gray-400 text-sm border-2 border-solid" name="customer" id="customer" required>
+                                    <option value="">Select an option</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div class="mt-4">
+                                <label for="css-questions">Do you have any questions:</label>
+                            </div>
+                            <div class="">
+                                <textarea class="border-2 border-solid border-gray-400 px-2 py-2 mt-1 mb-6
+                                text-left text-gray-400 placeholder-gray-400" id="css-questions"
+                                    name="css-questions" rows="3" cols="20" placeholder="Who is flexbox...">
+                                </textarea>
+                            </div>
+                        </div>
+                    </section>
+                    <button class="text-2xl bg-gray-300 px-6 py-4 lg:w-full lg:mx-2 w-1/2 border-black border-2 border-solid font-semibold mb-10"
+                        type="submit">Submit</button>
+                </form>
+            </main>
+        </div>
+            <footer class="bg-gray-900 text-gray-200 w-full lg:text-center py-4 px-8">
+                <address>
+                    <a class="underline" href="https://freecodecamp.org">freeCodeCamp</a><br />
+                    San Francisco<br />
+                    California<br />
+                    USA
+                </address>
+
+            </footer>
+       
+    </body>
+
+</html>
